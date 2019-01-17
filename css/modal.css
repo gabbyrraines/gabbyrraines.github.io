@@ -1,0 +1,81 @@
+.modal-wrapper {
+  display: none;
+}
+
+.modal-active .page-mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal-active .modal-wrapper {
+  display: block;
+  padding: 30px;
+  position: absolute;
+  width: 80%;
+  max-width: 400px;
+  background-color: #D66853;
+  color: white;
+  margin-top: 0px;
+  opacity: 1;
+  animation: slide .5s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index:10;
+}
+
+@keyframes slide {
+  0% {
+    margin-top: 200px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+.modal-button{
+  position: absolute;
+  cursor: pointer;
+  position: relative;
+  -webkit-appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 2px;
+  transition: all 0.5s ease;
+  font-weight: 600;
+  font-size: 14px;
+  height: 60px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 0px;
+  box-shadow: -15px 0 70px -15px #D66853, 15px 0 70px -15px #D66853;
+}
+
+.close-button {
+  background-color: #242f3a;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.modal-button:hover,.close-button:hover {
+  background-color: white;
+  color: #242f3a;
+}
